@@ -1,0 +1,112 @@
+body {
+  font-family: sans-serif;
+  background: linear-gradient(to right,purple,indigo,rgb(39, 1, 66),black);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+#chessBoard {
+  display: grid;
+  grid-template-columns: repeat(8, 60px);
+  gap: 0;
+  margin: 20px auto;
+ 
+  justify-content: center;
+}
+.resBtn {
+      padding: 10px 20px;
+      margin-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background: gold;
+  border: none;
+  color: #000;
+  border-radius: 5px;
+}
+.resBtn:hover {
+    background:greenyellow;
+}
+.undoBtn {
+      padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  background: gold;
+  border: none;
+  color: #000;
+  border-radius: 5px;
+}
+.undoBtn:hover {
+    background:greenyellow;
+}
+.cell {
+  width: 60px;
+  height: 60px;
+  font-size: 32px;
+  line-height: 60px;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s ease;
+}
+
+.white {
+  background-color: #f0d9b5;
+}
+
+.black {
+  background-color: #b58863;
+}
+
+.highlight {
+  background-color: #f7ec6f !important;
+}
+
+.move-anim {
+  animation: pop 0.2s ease-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); }
+  100% { transform: scale(1); }
+}
+
+#promotionModal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#promotionBox {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  color: #000;
+}
+
+#promotionBox button {
+  font-size: 24px;
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.legal-move::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  display: block;
+  margin: auto;
+  margin-top: 22px;
+}

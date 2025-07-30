@@ -1,0 +1,160 @@
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background:linear-gradient(to right,purple,indigo,rgb(39, 1, 66),black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-container {
+  text-align: center;
+    max-width: 100%;
+  overflow-x: hidden;
+
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: wheat;
+}
+
+.info{
+  color: white;
+  font-weight: bold;
+}
+.stats {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-around;
+  max-width: 400px;
+  margin: 10px auto 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    padding: 10px;
+  gap: clamp(6px, 1.5vw, 10px);
+  justify-content: center;
+  max-width: 600px;
+  margin: 2rem auto;
+
+}
+
+.card {
+    width: 100%;
+  aspect-ratio: 1 / 1;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.card-front {
+  background:linear-gradient(to right,black,purple);
+  border: 4px solid gold;
+}
+.card-front:hover{
+  background:linear-gradient(to right,black,indigo);
+border: 4px solid #28a745 ;
+}
+
+.card-back {
+  background: gold;
+  color: #fff;
+    border: 2px solid transparent;
+  transform: rotateY(180deg);
+
+  
+}
+
+.theme-select {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+}
+
+.theme-select select {
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 15px;
+  border: 3px solid gold ;
+}
+.difficulty-select {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+}
+.difficulty-select select{
+
+   padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 15px;
+  border: 3px solid gold ;
+}
+
+.win-message {
+  display: none;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #28a745;
+}
+
+.win-message button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: gold;
+  color: indigo;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.win-message button:hover {
+  background: #28a745;
+}
+.card.shuffle .card-inner {
+  animation: shuffleFlip 0.3s ease-in-out;
+}
+
+@keyframes shuffleFlip {
+  0%   { transform: rotateY(0); }
+  50%  { transform: rotateY(180deg); }
+  100% { transform: rotateY(0); }
+}

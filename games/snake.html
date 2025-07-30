@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="../css/snake.css">
+</head>
+<body>
+  <h1>Snake Game</h1>
+  <div id="controls">
+  <label for="mode">Mode:</label>
+  <select id="mode">
+    <option value="solo">Single Player</option>
+    <option value="two">2 Players</option>
+  </select>
+
+  <button id="rainbow-btn" title="Toggle Rainbow Trail">🌈</button>
+  <button id="muteBtn" title="Mute / Unmute">🔊</button>
+  </div>
+</div>
+
+    </div>
+      <div id="scoreboard">
+        <div id="p1-score">
+          <span style="color: limegreen; font-size: 50px;">■</span> Player 1: <span id="score1">0</span> (High: <span id="high1">0</span>)
+        </div>
+        <div id="p2-score">
+          <span style="color: blue; font-size: 50px;">■</span> Player 2: <span id="score2">0</span> (High: <span id="high2">0</span>)
+        </div>
+    
+    </div>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div id="message"></div>
+    <button id="restart">Restart</button>
+  </div>
+ <audio id="eatSound" src="../assets/sounds/eat.mp3.wav"></audio>
+  <audio id="gameOverSound" src="../assets/sounds/gameover.mp3"></audio>
+
+  <script src="../js/snake.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emoji Chess</title>
+  <link rel="stylesheet" href="../css/chess.css">
+</head>
+<body>
+  <h1>♟ Emoji Chess</h1>
+  <div id="chessBoard"></div>
+  <div id="status" style="font-size: 20px; font-weight: bold;padding-bottom: 10px;">White's turn</div>
+  <button onclick="resetGame()" class="resBtn">Restart</button>
+  <button onclick="undoMove()" class="undoBtn">Undo</button>
+
+  <!-- Promotion Modal -->
+  <div id="promotionModal" style="display:none;">
+    <div id="promotionBox">
+      <h2>Promote Pawn To:</h2>
+      <button onclick="promotePawn('q')">♛ Queen</button>
+      <button onclick="promotePawn('r')">♜ Rook</button>
+      <button onclick="promotePawn('b')">♝ Bishop</button>
+      <button onclick="promotePawn('n')">♞ Knight</button>
+    </div>
+  </div>
+
+  <!-- Sound Effects -->
+  <audio id="moveSound" src="https://actions.google.com/sounds/v1/cartoon/pop.ogg" preload="auto"></audio>
+  <audio id="captureSound" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg" preload="auto"></audio>
+  <audio id="checkSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+
+  <script src="../js/chess.js"></script>
+</body>
+</html>

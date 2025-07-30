@@ -1,0 +1,93 @@
+body {
+  font-family: 'Courier New', monospace;
+  background:linear-gradient(to right,purple,indigo,rgb(39, 1, 66),black);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: gold;
+}
+
+.mode-select {
+  margin: 10px 0;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+select{
+    border: 4px solid gold;
+    border-radius: 25px;
+  padding: 10px; 
+}
+
+#scoreboard span {
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+#turn-indicator {
+  margin: 10px 0;
+  color: #ffcc00;
+  font-size: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.cell {
+  background-color:purple;
+  border: 4px solid gold;
+  font-size: 2.5rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell:hover {
+  background-color:rgb(143, 137, 137);
+  border: 4px solid green;
+}
+
+.message {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #222;
+  border: 2px solid gold;
+  color: gold;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background: gold;
+  border: none;
+  color: #000;
+  border-radius: 5px;
+}
+button:hover{
+  background:green;
+}

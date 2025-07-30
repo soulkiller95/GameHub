@@ -1,0 +1,198 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background:linear-gradient(to right,purple,indigo,rgb(39, 1, 66),black);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.difficulty-select {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+}
+.difficulty-select select{
+
+   padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 15px;
+  border: 3px solid gold ;
+}
+.container {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+/* Controls section */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.controls select{
+  margin: 10px auto;
+  text-align: center;
+  font-size: 25px;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 15px;
+  border: 5px solid gold ;
+}
+.controls button {
+  padding: 6px 12px;
+  font-size: 30px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.controls button {
+  background: #3498db;
+  color: white;
+}
+
+.controls button:hover {
+  background: #2980b9;
+}
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.moves,
+.best {
+  background: #222;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+/* Puzzle grid */
+.puzzle {
+  display: grid;
+  margin: 0 auto;
+  background: #1e1e1e;
+  gap: 4px;
+  border: 4px solid #444;
+  border-radius: 10px;
+  transition: width 0.3s, height 0.3s;
+}
+
+/* Individual tiles */
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  background: #2ecc71;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+#puzzle {
+  display: grid;
+  gap: 5px;
+  margin: 20px auto;
+  width: fit-content;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+.tile.empty {
+  background: transparent;
+  cursor: default;
+}
+
+/* Win message */
+.win {
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 20px;
+  background-color: #27ae60;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive puzzle sizes based on difficulty */
+.puzzle[data-size="3"] {
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+}
+
+.puzzle[data-size="4"] {
+  grid-template-columns: repeat(4, 70px);
+  grid-template-rows: repeat(4, 70px);
+}
+
+.puzzle[data-size="5"] {
+  grid-template-columns: repeat(5, 60px);
+  grid-template-rows: repeat(5, 60px);
+}
+#winMessage {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+#winMessage button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#winMessage button:hover {
+  background-color: #1976d2;
+}

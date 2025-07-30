@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sliding Puzzle Game</title>
+  <link rel="stylesheet" href="../css/sliding.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 style="font-size: 60px;font-weight: bold; margin-bottom: 100px;">🧩 Sliding Puzzle</h1>
+
+    <div class="controls">
+      <label for="difficulty">Difficulty:</label>
+      <select id="difficulty">
+        <option value="3">Easy (3×3)</option>
+        <option value="4" selected>Normal (4×4)</option>
+        <option value="5">Hard (5×5)</option>
+      </select>
+      <div class="tooltip-container">
+      <button id="shuffleBtn">🔀</button>
+        <span class="tooltip-text">Shuffle cards</span>
+      </div>
+      <span class="moves" style="font-size: 25px;">Moves: <span id="moveCount">0</span></span>
+      <span class="best" style="font-size: 23px;">Best: <span id="bestScore" style="font-size: 23px;">--</span></span>
+    </div>
+
+    <div id="puzzle" class="puzzle"></div>
+
+   <div id="winMessage" class="hidden">
+  🎉 Congratulations! You solved it...
+  <br />
+  <button id="replayBtn">Play Again</button>
+</div>
+
+  </div>
+<audio id="moveSound" src="../assets/sounds/move.mp3" preload="auto"></audio>
+<audio id="winSound" src="../assets/sounds/win.mp3" preload="auto"></audio>
+  <script src="../js/sliding.js"></script>
+</body>
+</html>

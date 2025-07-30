@@ -1,0 +1,177 @@
+ body {
+      margin: 0;
+      font-family: monospace;
+      background:linear-gradient(to right,purple,indigo,rgb(39, 1, 66),black);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+      h1 {
+      margin: 10px;
+      font-size:65px;
+    }
+    #game-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .mode-select {
+  margin: 10px 0;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+#rainbow-btn {
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s, border-color 0.3s;
+}
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+#rainbow-btn {
+  font-size: 18px;
+  padding: 6px 10px;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#rainbow-btn.active {
+  background-color: #ffd6f6;
+  border-color: #ff60d6;
+  box-shadow: 0 0 8px #ff60d6;
+}
+
+#rainbow-btn.active {
+  background-color: #ffb3ec;
+  border-color: #ff60d6;
+  box-shadow: 0 0 5px #ff60d6;
+}
+
+select{
+    border: 4px solid gold;
+    border-radius: 25px;
+  padding: 10px; 
+}
+
+    #p1-score,#p2-score {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: white;
+  margin-bottom: 20px;
+}
+
+    #info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    #top-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#muteBtn {
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  border: none;
+  background-color: #444;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#muteBtn:hover {
+  background-color: #666;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-container .tooltip-text {
+  visibility: hidden;
+  width: 140px;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+    #scoreboard {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 10px;
+    }
+    canvas {
+      background-color: purple;
+      border: 10px solid gold;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+   #message {
+  font-size: 22px;       /* Increase text size */
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0;
+  color: yellow;
+  white-space: pre-line; /* Preserve line breaks from JS */
+}
+
+    #restart {
+  font-size: 22px;      /* Make text bigger */
+  padding: 12px 24px;   /* Make button itself larger */
+  background-color: yellow; /* Optional: green button */
+  color: black;
+  border: none;
+  font-style: italic;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#restart:hover {
+  background-color:green;
+}
+    #mode {
+      margin-top: 5px;
+    }
